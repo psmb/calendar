@@ -10,9 +10,8 @@ const gray4 = '#EFEFF4';
 const gray5 = '#fafafc';
 const gray6 = '#ffffff';
 
-const getTheme = primary => {
-    const dark = isDarkMode();
-
+const getTheme = (primary, isDark) => {
+    const dark = isDark || isDarkMode();
     return {
         colours: {
             primary: primary || (dark ? '#E1B74D' : '#AE841A'),
